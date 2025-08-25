@@ -1,4 +1,4 @@
-# Algorithme.ai — BlackSwanClassifier (Library API)
+# Algorithme.ai — BlackSwanClassifier 🦢 (Library API)
 
 Predictive modeling toolkit that talks to Algorithme.ai’s hosted engine through a thin Python client. This repository includes a minimal Python package (`algorithmeai`) and a **quickstart** showing how to build, evaluate, improve, and export a model using CSV files.
 
