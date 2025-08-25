@@ -79,7 +79,7 @@ item = population[0]  # pick one item
 # Item-level introspection
 fi_item = new_model.get_feature_importance(item)   # feature contributions for this item
 conf_item = new_model.get_item_confidence(item)    # confidence for this item
-new_model.get_audit(item)                          # prints/records an audit entry (see Notes)
+audit = new_model.get_audit(item)                  # returns a dictionary audit with lookalikes csv confidence and feature importance for this item
 
 # 10) Export a portable handle and re-load later
 new_model.to_json("quickstart/blackswan-api.json")
@@ -88,7 +88,6 @@ print(final_model.log)  # server log / trace from last call
 ```
 
 > **Notes:**
-> - `get_audit(item)` prints/logs the audit and updates `self.log`. The function currently returns `None`.
 > - Most methods update both `self.hash` (the remote model handle) and `self.log` (a textual server log).
 
 ---
