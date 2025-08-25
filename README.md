@@ -193,7 +193,7 @@ BlackSwanClassifier(filepath, target_index=0, excluded_features_index=[])
 
 ## License
 
-No explicit license is included. Until one is added, assume **all rights reserved** © Algorithme.ai / Charles Dana (2025). For commercial use, contact the author.
+MIT Licence. Assume **all rights reserved** © Algorithme.ai / Charles Dana (2025). For commercial use, contact the author.
 
 ---
 
