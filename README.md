@@ -9,7 +9,7 @@ Predictive modeling toolkit that talks to Algorithme.ai’s hosted engine throug
 ## Contents
 
 ```
-LIBRARY-API/
+BlackSwanClassifier/
 ├─ algorithmeai/                 # Python client package
 │  ├─ __init__.py
 │  └─ algorithmeai.py            # BlackSwanClassifier client
