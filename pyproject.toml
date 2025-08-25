@@ -1,10 +1,16 @@
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "algorithmeai"
 version = "1.0.0"
 description = "Predictive modeling with BlackSwanClassifier"
-authors = [{name = "Charles Dana", email = "charles@algorithme.ai"}]
-dependencies = []
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{ name = "Charles Dana", email = "charles@algorithme.ai" }]
+dependencies = ["requests>=2.31.0"]
+
+[tool.setuptools.packages.find]
+include = ["algorithmeai*"]
+exclude = ["quickstart*", "tests*", "docs*"]
