@@ -30,7 +30,7 @@ You can install the package locally in editable mode. The client depends on `req
 
 ```bash
 # from the repo root (this folder)
-pip install -e .
+pip install algorithmeai
 pip install requests  # if not already present
 ```
 
