@@ -79,8 +79,8 @@ item = population[0]  # pick one item
 # Item-level introspection
 fi_item = new_model.get_feature_importance(item)   # feature contributions for this item
 conf_item = new_model.get_item_confidence(item)    # confidence for this item
-audit = new_model.get_audit(item)                  # returns a dictionary audit with lookalikes csv confidence and feature importance for this item
-
+audit = new_model.get_audit(item)                  # returns a text field with a RAG for decision making audit with feature importance for this item
+print(audit)                                       # To print the audit in the terminal
 # 10) Export a portable handle and re-load later
 new_model.to_json("quickstart/blackswan-api.json")
 final_model = BlackSwanClassifier("quickstart/blackswan-api.json")
@@ -155,7 +155,7 @@ BlackSwanClassifier(filepath, target_index=0, excluded_features_index=[])
 
 ## RAG Exemple
 ```
-# Algorithme.ai : Got audit ###Algorithme.ai : RAG on item {'CancerHistory': 1.0, 'GeneticRisk': 0.0, 'PhysicalActivity': 7.382955105, 'Diagnosis': 1.0, 'Gender': 1.0, 'AlcoholIntake': 0.3077151707, 'Age': 31.0, 'BMI': 31.19543615, 'Smoking': 0.0}
+###Algorithme.ai : RAG on item {'CancerHistory': 1.0, 'GeneticRisk': 0.0, 'PhysicalActivity': 7.382955105, 'Diagnosis': 1.0, 'Gender': 1.0, 'AlcoholIntake': 0.3077151707, 'Age': 31.0, 'BMI': 31.19543615, 'Smoking': 0.0}
     • Confidence percentage 42.857%
     • Feature importance {'Diagnosis': 0.0, 'Age': 0.103, 'Gender': 0.121, 'BMI': 0.19, 'Smoking': 0.086, 'GeneticRisk': 0.069, 'PhysicalActivity': 0.19, 'AlcoholIntake': 0.138, 'CancerHistory': 0.103}
 ### Insights ###
